@@ -20,19 +20,23 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_MODULE_TAGS := samples
+LOCAL_MODULE_TAGS := optional
 
 # This is the target being built.
-LOCAL_MODULE:= libledPlus_jni
+LOCAL_MODULE:= libled_jni
 
 # All of the source files that we will compile.
 LOCAL_SRC_FILES:= \
     ledNative.cpp
 
+LOCAL_C_INCLUDES += \
+    $(LOCAL_PATH)/../../hal/led_hal
+
 # All of the shared libraries we link against.
 #LOCAL_LDLIBS := -llog
 LOCAL_SHARED_LIBRARIES := \
-    liblog
+    liblog \
+    libhardware
 
 # No static libraries.
 LOCAL_STATIC_LIBRARIES :=
