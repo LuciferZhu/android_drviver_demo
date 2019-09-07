@@ -1,0 +1,5 @@
+package my_demo.hardware.led@1.0;
+
+interface ILed {
+    control(uint32_t enable) generates (int32_t retval);
+};

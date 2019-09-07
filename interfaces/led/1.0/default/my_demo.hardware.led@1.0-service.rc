@@ -1,0 +1,4 @@
+service my_demo.led-1-0 /vendor/bin/hw/my_demo.hardware.led@1.0-service
+    class hal
+    user system
+    group system
