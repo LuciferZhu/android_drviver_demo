@@ -30,9 +30,6 @@ struct Led : public ILed {
 
 };
 
-// FIXME: most likely delete, this is only for passthrough implementations
-// extern "C" ILed* HIDL_FETCH_ILed(const char* name);
-
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace led

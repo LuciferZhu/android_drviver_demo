@@ -1,6 +1,6 @@
 // FIXME: your file license if you have one
 
-#define LOG_TAG "led_hal"
+#define LOG_TAG "my_demo.hardware.led@1.0-impl"
 #include <log/log.h>
 
 #include <stdio.h>
@@ -24,17 +24,17 @@ static const char THE_DEVICE[] = "/sys/devices/platform/leds/leds/user_led3/brig
 
 // Methods from ::my_demo::hardware::led::V1_0::ILed follow.
 Led::Led() {
-    ALOGD("----%s()", __func__);
+    ALOGD("%s() ++++++++", __func__);
 }
 
 Led::~Led() {
-    ALOGD("----%s()", __func__);
+    ALOGD("%s() ++++++++", __func__);
 }
 
 Return<int32_t> Led::control(uint32_t enable) {
     char ctrl_str[4];
     int ret = 0;
-    ALOGD("-----%s() enable=%d", __func__, enable);
+    ALOGD("%s() ++++++++ enable=%d", __func__, enable);
 
     int fd = open(THE_DEVICE, O_RDWR);
     if (fd < 0) {
@@ -69,10 +69,6 @@ err_open:
 
 // Methods from ::android::hidl::base::V1_0::IBase follow.
 
-//ILed* HIDL_FETCH_ILed(const char* /* name */) {
-    //return new Led();
-//}
-//
 }  // namespace implementation
 }  // namespace V1_0
 }  // namespace led
