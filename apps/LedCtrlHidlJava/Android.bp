@@ -31,13 +31,12 @@ android_app {
         "androidx-constraintlayout_constraintlayout",
         "androidx-constraintlayout_constraintlayout-solver",
         "my_demo.hardware.led-V1.0-java",
-        "android.hidl.base-V1.0-java",
     ],
 
     optimize: {
         enabled: false,
     },
-    sdk_version: "current",
+    //sdk_version: "current",
     dex_preopt: {
         enabled: false,
     },
